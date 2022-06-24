@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InvoiceComponent } from './components/invoice/invoice.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ProductsComponent
+    ProductsComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

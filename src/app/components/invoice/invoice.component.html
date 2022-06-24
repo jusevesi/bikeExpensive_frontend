@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="datos">
+        <div [formGroup]="couponForm" class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">COUPONS</span>
+            <input formControlName="coupon" type="text" class="form-control" placeholder="COUPON" aria-label="COUPON"
+                aria-describedby="basic-addon1">
+            <button type="button" class="btn btn-secondary" (click)="applyCoupon()">Aplicar</button>
+        </div>
+        <ol class="list-group list-group-numbered list">
+            <li *ngFor="let cart of cartList" class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{cart.nombre}}</div>
+                    $ {{cart.precio | number}}
+                </div>
+                <span class="badge bg-primary rounded-pill">X{{cart.amount}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">PRECIO:</div>
+                    Valor Compra: $ {{total | number}}<br>
+                    Descuento: ${{descuento | number}}<br>
+                    TOTAL: $ {{total - descuento | number}}
+                </div>
+            </li>
+        </ol>
+    </div>
+    <form class="invoice-form"  [formGroup]="userForm">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" formControlName="nombre"class="form-control" id="exampleFormControlInput1" placeholder="Nombre y Apellido"
+                required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+            <input type="text" formControlName="direccion" class="form-control" id="exampleFormControlInput1" placeholder="Cra 69 # 50 - 15"
+                required>
+        </div>
+
+
+        <button type="button" class="btn btn-secondary" (click)="postInvoice()">Comprar</button>
+    </form>
+</div>

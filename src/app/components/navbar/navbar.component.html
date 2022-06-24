@@ -21,7 +21,12 @@
         </li>
       </ul>
       <form class="d-flex">
-        <button class="btn btn-outline-success" type="submit">Shopping Cart</button>
+        <button class="btn btn-outline-success position-relative" routerLink="/invoice" >Shopping Cart
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{amount}}
+            <span class="visually-hidden">unread messages</span>
+          </span>        
+        </button>
       </form>
     </div>
   </div>

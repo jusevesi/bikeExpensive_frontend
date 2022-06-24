@@ -1,0 +1,13 @@
+.container{
+    display:flex;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.list{
+    width: 400px;
+}
+
+.invoice-form{
+    flex-grow: 1;
+}
