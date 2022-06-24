@@ -6,11 +6,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 
-export class ProductsService {
+export class CouponsService {
 
   constructor(private readonly http: HttpClient) { }
 
   public getData(): Promise<any> {
-    return this.http.get(`${environment.apiUrl}/products`).toPromise();
+    return this.http.get(`${environment.apiUrl}/coupons`).toPromise();
   }
 }

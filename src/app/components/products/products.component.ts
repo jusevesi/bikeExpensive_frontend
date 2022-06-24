@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsService} from '../../services/products.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-products',
@@ -8,7 +8,7 @@ import { ProductsService} from '../../services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  
+
   public products: any = [];
 
   constructor(private readonly request: ProductsService, private route: ActivatedRoute) { }
@@ -17,11 +17,11 @@ export class ProductsComponent implements OnInit {
     this.getProducts();
   }
 
-  private async getProducts(): Promise<void>{
-    this.request.getData().then((response:any) =>{
+  private async getProducts(): Promise<void> {
+    this.request.getData().then((response: any) => {
       this.products = response.products;
       console.log(this.products)
-    }).catch((error:any)=>{
+    }).catch((error: any) => {
       console.log(error);
     })
   }
