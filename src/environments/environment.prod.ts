@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://meridian-frontend.herokuapp.com'
+  apiUrl: 'https://meridian-test-backend.herokuapp.com'
 };
