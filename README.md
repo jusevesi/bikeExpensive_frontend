@@ -18,5 +18,5 @@ npm start
 ```
 3. Open the project in your browser using the following link:
 ```sh
-http://localhost:4200/
+http://localhost:4200/products
 ```
