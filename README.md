@@ -1,6 +1,6 @@
-# Test Meridian Frontend
+# BikExpensive Frontend
 
-This repository contains the frontend in angular for the Meridian development test.
+This repository contains the frontend in angular for BikExpensive.
 
 ## Steps to execute the project
 To execute this project, you must install first the backend in the following link:
